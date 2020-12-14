@@ -1,0 +1,26 @@
+<div class = "col-md-6 offset-md-3">
+    <h2>Add Company</h2>
+    
+    <form (ngSubmit) = "onSubmit()">
+        <div class ="form-group">
+            <label>Company Name</label>
+            <input type = "text" class ="form-control" id="cname" [(ngModel)] = "company.companyName" name = "cname">
+        </div>
+        <div class ="form-group">
+            <label>Stock Exchange</label>
+            <input type = "text" class ="form-control" id="stockexchange" [(ngModel)] = "company.stockExchange" name = "stockexchange">
+        </div>
+        <div class ="form-group">
+            <label>CEO</label>
+            <input type = "text" class ="form-control" id="ceo" [(ngModel)] = "company.ceo" name = "ceo">
+        </div>
+        <div class ="form-group">
+            <label>Board Of Directors</label>
+            <input type = "text" class ="form-control" id="bod" [(ngModel)] = "company.boardOfDirectors" name = "bod">
+        </div>
+    
+    
+        <button class ="btn  btn-success" type="submit">Submit</button>
+        
+    </form>
+    </div>

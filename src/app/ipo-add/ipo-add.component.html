@@ -1,0 +1,35 @@
+<div class = "col-md-6 offset-md-3">
+    <h2>Add IPO</h2>
+    
+    <form (ngSubmit) = "onSubmit()">
+        <div class ="form-group">
+            <label>Company Name</label>
+            <input type = "text" class ="form-control" id="cname" [(ngModel)] = "ipo.companyName" name = "cname">
+        </div>
+        <div class ="form-group">
+            <label>Stock Exchange</label>
+            <input type = "text" class ="form-control" id="stockexchange" [(ngModel)] = "ipo.stockExchange" name = "stockexchange">
+        </div>
+        <div class ="form-group">
+            <label>Date</label>
+            <input type = "date" class ="form-control" id="date" [(ngModel)] = "ipo.date" name = "date">
+        </div>
+        <div class ="form-group">
+            <label>Time</label>
+            <input type = "time" class ="form-control" id="time" [(ngModel)] = "ipo.time" name = "time">
+        </div>
+        <div class ="form-group">
+            <label>Total No. Of Shares</label>
+            <input type = "number" class ="form-control" id="tns" [(ngModel)] = "ipo.totalNumberOfShares" name = "tns">
+        </div>
+        <div class ="form-group">
+            <label>Price Per Share</label>
+            <input type = "float" class ="form-control" id="pps" [(ngModel)] = "ipo.pricePerShare" name = "pps">
+        </div>
+    
+    
+    
+        <button class ="btn  btn-success" type="submit">Submit</button>
+        
+    </form>
+    </div>
