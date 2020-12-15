@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
-import { User } from '../user';
-import { UserService } from '../user.service';
+import { User } from '../../entity/user';
+import { UserService } from '../../service/user.service';
 
 @Component({
-  selector: 'app-user-add',
-  templateUrl: './user-add.component.html',
-  styleUrls: ['./user-add.component.css']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class UserAddComponent implements OnInit {
+export class SignupComponent implements OnInit {
 
   user : User = new User();
   constructor(private userService: UserService,private router:Router){} 
@@ -25,7 +25,7 @@ export class UserAddComponent implements OnInit {
   }
 
   goToUserAll(){
-    this.router.navigate(['/user-all']);
+    this.router.navigate(['/login']);
   }
 
   onSubmit(){

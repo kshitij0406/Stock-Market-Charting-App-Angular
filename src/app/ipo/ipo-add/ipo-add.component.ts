@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IPODetails } from '../ipo-details';
-import { IpoDetailsService } from '../ipo-details.service';
+import { IPODetails } from '../../entity/ipo-details';
+import { IpoDetailsService } from '../../service/ipo-details.service';
 
 @Component({
   selector: 'app-ipo-add',

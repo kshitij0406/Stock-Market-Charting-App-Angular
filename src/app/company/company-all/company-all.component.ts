@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Company } from '../company';
+import { Company } from '../../entity/company';
 import { CompanyAddComponent } from '../company-add/company-add.component';
-import { CompanyService } from '../company.service';
+import { CompanyService } from '../../service/company.service';
 
 @Component({
   selector: 'app-company-all',
@@ -35,6 +35,6 @@ export class CompanyAllComponent implements OnInit {
     });
   }
 
-  
+
 
 }

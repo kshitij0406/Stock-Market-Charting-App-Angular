@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { StockExchange } from '../stock-exchange';
-import { StockExchangeService } from '../stock-exchange.service';
+import { StockExchange } from '../../entity/stock-exchange';
+import { StockExchangeService } from '../../service/stock-exchange.service';
 
 @Component({
   selector: 'app-stock-exchange-update',

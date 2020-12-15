@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Company } from '../company';
-import { CompanyService } from '../company.service';
+import { Company } from '../../entity/company';
+import { CompanyService } from '../../service/company.service';
 
 @Component({
   selector: 'app-company-add',

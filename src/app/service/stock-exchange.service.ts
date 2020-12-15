@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { StockExchange } from './stock-exchange';
+import { StockExchange } from '../entity/stock-exchange';
 
 @Injectable({
   providedIn: 'root'
