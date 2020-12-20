@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserAllComponent } from './user/user-all/user-all.component';
@@ -20,6 +20,7 @@ import { LoginComponent } from './authenticate/login/login.component';
 import { UserLandingPageComponent } from './user/user-landing-page/user-landing-page.component';
 import { AdminLandingPageComponent } from './admin/admin-landing-page/admin-landing-page.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
+import { TokenInterceptor } from './token-interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,13 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     FormsModule,
     NgxWebstorageModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

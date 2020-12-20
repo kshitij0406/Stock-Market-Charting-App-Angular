@@ -2,7 +2,7 @@ export class Company {
     id!: number;
     ceo!: string;
     companyName!: string;
-    stockExchange!: string;
+    stockexchange!: string;
     boardOfDirectors!: string;
 }
 
