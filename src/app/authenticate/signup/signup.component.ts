@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
+import { AuthenticateService } from 'src/app/service/authenticate.service';
 import { User } from '../../entity/user';
 import { UserService } from '../../service/user.service';
 
@@ -12,12 +13,12 @@ import { UserService } from '../../service/user.service';
 export class SignupComponent implements OnInit {
 
   user : User = new User();
-  constructor(private userService: UserService,private router:Router){} 
+  constructor(private authenticateService: AuthenticateService,private router:Router){} 
 
   ngOnInit(): void {
   }
   saveUser(){
-    this.userService.addUser(this.user).subscribe(data => {
+    this.authenticateService.signup(this.user).subscribe(data => {
       console.log(data);
       this.goToUserAll();
     },

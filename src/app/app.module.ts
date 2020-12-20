@@ -17,6 +17,9 @@ import { IpoAllComponent } from './ipo/ipo-all/ipo-all.component';
 import { IpoAddComponent } from './ipo/ipo-add/ipo-add.component';
 import { IpoUpdateComponent } from './ipo/ipo-update/ipo-update.component';
 import { LoginComponent } from './authenticate/login/login.component';
+import { UserLandingPageComponent } from './user/user-landing-page/user-landing-page.component';
+import { AdminLandingPageComponent } from './admin/admin-landing-page/admin-landing-page.component';
+import { NgxWebstorageModule } from 'ngx-webstorage';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,12 +36,15 @@ import { LoginComponent } from './authenticate/login/login.component';
     IpoAddComponent,
     IpoUpdateComponent,
     LoginComponent,
+    UserLandingPageComponent,
+    AdminLandingPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxWebstorageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

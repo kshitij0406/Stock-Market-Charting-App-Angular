@@ -1,38 +1,10 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a routerLink="user-all" routerLinkActive="active" class="nav-link">Users List</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="signup" routerLinkActive="active" class="nav-link">Signup</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="stock-exchange-all" routerLinkActive="active" class="nav-link">Stock Exchange List</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="stock-exchange-add" routerLinkActive="active" class="nav-link">Add Stock Exchange</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="company-all" routerLinkActive="active" class="nav-link">Company List</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="company-add" routerLinkActive="active" class="nav-link">Add Company</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="ipo-all" routerLinkActive="active" class="nav-link">IPO List</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="ipo-add" routerLinkActive="active" class="nav-link">Add IPO</a>
-        </li>
-    </ul>
-</nav>
-<br>
+<header >
+    <h3>Stock Charting App</h3>
+</header>
 
-<h3 class="text-center">{{title}}</h3><br><br>
-<div class="container">
-    <router-outlet></router-outlet>
+<div>
+<router-outlet></router-outlet>
 </div>
-
 
 <footer>
     <div class="container">

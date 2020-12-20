@@ -13,11 +13,12 @@ import { SignupComponent} from './authenticate/signup/signup.component';
 import { UserAllComponent } from './user/user-all/user-all.component';
 import { UserUpdateComponent } from './user/user-update/user-update.component';
 import { LoginComponent } from './authenticate/login/login.component';
+import { UserLandingPageComponent } from './user/user-landing-page/user-landing-page.component';
 
 const routes: Routes = [
   {path: 'user-all', component: UserAllComponent },
   {path:'signup',component: SignupComponent},
-  {path:'', redirectTo:'stock-exchange-all', pathMatch:'full'},
+  {path:'', redirectTo:'login', pathMatch:'full'},
   {path:'user-update/:id' , component:UserUpdateComponent},
   {path:'stock-exchange-all',component:StockExchangeAllComponent},
   {path:'stock-exchange-add',component : StockExchangeAddComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path:'ipo-all',component: IpoAllComponent},
   {path:'ipo-add',component :IpoAddComponent},
   {path:'ipo-update/:id',component : IpoUpdateComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path:'user-landing-page',component:UserLandingPageComponent}
   
   
 ];

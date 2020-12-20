@@ -12,7 +12,10 @@
     </div>
     <div class ="form-group">
         <label>Type</label>
-        <input type = "text" class ="form-control" id="type" [(ngModel)] = "user.type" name = "type">
+        <select class ="form-control" name = "type" [(ngModel)] = "user.type" id="type" placeholder="Type">
+            <option  value ="user">user</option>
+            <option value ="admin">admin</option>
+        </select>
     </div>
     <div class ="form-group">
         <label>Mobile Number</label>
