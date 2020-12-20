@@ -17,6 +17,9 @@ export class StockExchangeAllComponent implements OnInit {
   ngOnInit(): void {
     this.getAllStockExchange();
   }
+  addExchange(){
+    this.router.navigate(['stock-exchange-add']);
+  }
 
   getAllStockExchange(){
     this.stockExchangeService.getStockExchangeList().subscribe(data =>{

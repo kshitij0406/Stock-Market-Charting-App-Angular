@@ -24,6 +24,10 @@ export class IpoAllComponent implements OnInit {
     });
   }
   
+  addIpo(){
+    this.router.navigate(['ipo-add']);
+  }
+
   updateIpo(id:number){
   
   }

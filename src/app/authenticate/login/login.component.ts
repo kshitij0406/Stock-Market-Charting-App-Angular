@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.authenticateService.login(this.loginDetails).subscribe(data =>{
       console.log("Login Successful");
+      this.userLandingPage();
     },error => {
       console.log(error);
     });
@@ -28,6 +29,9 @@ export class LoginComponent implements OnInit {
 
   signup(){
     this.router.navigate(['/signup']);
+  }
+  userLandingPage(){
+    this.router.navigate(['/user-landing-page']);
   }
 
 }

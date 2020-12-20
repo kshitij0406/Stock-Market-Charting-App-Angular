@@ -25,7 +25,13 @@ export class CompanyAllComponent implements OnInit {
     });
   }
   
-  updateCompany(id:number){}
+  addCompany(){
+    this.router.navigate(['company-add']);
+  }
+
+  updateCompany(id:number){
+
+  }
   deleteCompany(id:number){
     this.companyService.deleteCompanyById(id).subscribe(data =>{
       console.log(data);
