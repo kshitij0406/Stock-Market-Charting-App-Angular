@@ -1,11 +1,7 @@
 <div class = "container">
-    <button (click) = "addIpo()" class ="btn btn-info" style="margin-left: 10px;">Add Ipo</button>
-</div>
-<br>
-<div class = "container">
     <button (click) = "homePage()" class ="btn btn-info" style="margin-left: 10px;">Home Page</button>
 </div>
-<br>
+<br><br>
 
 <h2>IPO List</h2><br><br>
 <table class="table table-striped">
@@ -17,7 +13,7 @@
             <th> Time</th>
             <th> Total No. Of Shares</th>
             <th> Price Per Share</th>
-            <th> Actions</th>
+         
 
         </tr>
     </thead>
@@ -44,14 +40,8 @@
             <td>
                 {{c.pricePerShare}}
             </td>
-            <td>
-                <button (click) = "updateIpo(c.id)" class ="btn btn-info">Update</button>            
-
-                <button (click) = "deleteIpo(c.id)" class ="btn btn-info" style="margin-left: 10px;">Delete</button>            
-            </td>
+           
         </tr>
 
     </tbody>
 </table>
-
-

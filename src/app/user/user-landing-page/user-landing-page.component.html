@@ -1,5 +1,20 @@
-<h2>Welcome</h2><br>
-
-<div class = "container">
-    <button (click) = "companyAll()" class ="btn btn-info" style="margin-left: 10px;">All Companies</button>
+<div class="container">
+    <h2>Welcome {{username}}</h2><br>
 </div>
+
+<div class="container">
+    <button (click)="companyAll()" class="btn btn-info" style="margin-left: 10px;">All Companies</button>
+</div>
+<br>
+<div class="container">
+    <button (click)="ipoAll()" class="btn btn-info" style="margin-left: 10px;">IPOs</button>
+</div>
+<br>
+<div class="container">
+    <button (click)="compareCompanies()" class="btn btn-info" style="margin-left: 10px;">Compare Companies</button>
+</div>
+<br>
+<div class="container">
+    <button (click)="compareSectors()" class="btn btn-info" style="margin-left: 10px;">Compare Sectors</button>
+</div>
+<br>

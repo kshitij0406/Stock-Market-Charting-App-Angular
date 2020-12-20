@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { StockExchange } from 'src/app/entity/stock-exchange';
+import { StockExchangeService } from 'src/app/service/stock-exchange.service';
 import { Company } from '../../entity/company';
 import { CompanyService } from '../../service/company.service';
 
@@ -11,9 +13,12 @@ import { CompanyService } from '../../service/company.service';
 export class CompanyAddComponent implements OnInit {
 
   company:Company = new Company();
-  constructor(private companyService: CompanyService,private router:Router){} 
+  stockExchangeDetails :StockExchange[] = [];
+  
+  constructor(private companyService: CompanyService,private router:Router,private stockExchangeService:StockExchangeService){} 
 
   ngOnInit(): void {
+    this.getAllExchange();
   }
   saveUser(){
     this.companyService.addCompany(this.company).subscribe(data => {
@@ -22,6 +27,19 @@ export class CompanyAddComponent implements OnInit {
     },
     error => console.log(error));
   }
+
+
+
+  getAllExchange(){
+    this.stockExchangeService.getStockExchangeList().subscribe(data=>{
+      this.stockExchangeDetails =data;
+    });
+
+
+
+  }
+
+  
 
   goToCompanyAll(){
     this.router.navigate(['/company-all']);

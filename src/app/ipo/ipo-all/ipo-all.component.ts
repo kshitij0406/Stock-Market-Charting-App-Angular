@@ -31,6 +31,10 @@ export class IpoAllComponent implements OnInit {
   updateIpo(id:number){
   
   }
+
+  homePage(){
+    this.router.navigate(['admin-landing-page']);
+  }
   deleteIpo(id:number){
     this.ipoService.deleteIpoById(id).subscribe(data =>{
       console.log(data);

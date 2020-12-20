@@ -2,10 +2,8 @@
     <button (click) = "homePage()" class ="btn btn-info" style="margin-left: 10px;">Home Page</button>
 </div>
 <br>
-<div class = "container">
-    <button (click) = "addCompany()" class ="btn btn-info" style="margin-left: 10px;">Add COmpany</button>
-</div>
-<br>
+
+
 <br>
 <h2>Company List</h2><br><br>
 <table class="table table-striped">
@@ -15,7 +13,7 @@
             <th> Stock Exchange</th>
             <th> CEO</th>
             <th> Board Of Directors</th>
-            <th> Actions</th>
+            
 
         </tr>
     </thead>
@@ -37,14 +35,7 @@
                 {{c.boardOfDirectors}}
             </td>
             
-            <td>
-                <button (click) = "updateCompany(c.id)" class ="btn btn-info">Update</button>            
-
-                <button (click) = "deleteCompany(c.id)" class ="btn btn-info" style="margin-left: 10px;">Delete</button>            
-            </td>
         </tr>
 
     </tbody>
 </table>
-
-

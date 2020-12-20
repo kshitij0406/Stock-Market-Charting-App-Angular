@@ -14,6 +14,9 @@ import { UserAllComponent } from './user/user-all/user-all.component';
 import { UserUpdateComponent } from './user/user-update/user-update.component';
 import { LoginComponent } from './authenticate/login/login.component';
 import { UserLandingPageComponent } from './user/user-landing-page/user-landing-page.component';
+import { AdminLandingPageComponent } from './admin/admin-landing-page/admin-landing-page.component';
+import { IpoAllUserComponent } from './ipo/ipo-all-user/ipo-all-user.component';
+import { CompanyAllUserComponent } from './company/company-all-user/company-all-user.component';
 
 const routes: Routes = [
   {path: 'user-all', component: UserAllComponent },
@@ -30,7 +33,10 @@ const routes: Routes = [
   {path:'ipo-add',component :IpoAddComponent},
   {path:'ipo-update/:id',component : IpoUpdateComponent},
   {path:'login',component:LoginComponent},
-  {path:'user-landing-page',component:UserLandingPageComponent}
+  {path:'user-landing-page',component:UserLandingPageComponent},
+  {path:'admin-landing-page',component:AdminLandingPageComponent},
+  {path:'ipo-all-user',component:IpoAllUserComponent},
+  {path:'company-all-user',component:CompanyAllUserComponent}
   
   
 ];

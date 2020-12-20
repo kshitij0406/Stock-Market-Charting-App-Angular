@@ -18,6 +18,10 @@ export class CompanyAllComponent implements OnInit {
     this.getAllCompany();
   }
 
+  homePage(){
+    this.router.navigate(['admin-landing-page']);
+  }
+  
   public getAllCompany(){
     this.companyService.getCompanyList().subscribe(data => {
 

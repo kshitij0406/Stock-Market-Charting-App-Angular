@@ -23,6 +23,10 @@ export class UserService {
     return this.httpClient.get<User>(`${this.baseURL}/${id}`);
   }
 
+  getUserByUsername(username: string): Observable<User>{
+    return this.httpClient.get<User>(`${this.baseURL + "/username"}/${username}`);
+  }
+
   updateUser(id:number , user: User) :Observable<Object>{
     return this.httpClient.put(`${this.baseURL   +"/update"}/${id}`,user);
   }

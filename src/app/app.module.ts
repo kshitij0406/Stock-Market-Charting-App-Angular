@@ -21,6 +21,8 @@ import { UserLandingPageComponent } from './user/user-landing-page/user-landing-
 import { AdminLandingPageComponent } from './admin/admin-landing-page/admin-landing-page.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { TokenInterceptor } from './token-interceptor';
+import { CompanyAllUserComponent } from './company/company-all-user/company-all-user.component';
+import { IpoAllUserComponent } from './ipo/ipo-all-user/ipo-all-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,8 @@ import { TokenInterceptor } from './token-interceptor';
     LoginComponent,
     UserLandingPageComponent,
     AdminLandingPageComponent,
+    CompanyAllUserComponent,
+    IpoAllUserComponent,
   ],
   imports: [
     BrowserModule,

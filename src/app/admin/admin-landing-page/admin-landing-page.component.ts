@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticateService } from 'src/app/service/authenticate.service';
 
 @Component({
   selector: 'app-admin-landing-page',
@@ -8,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class AdminLandingPageComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, private authenticateService : AuthenticateService) { }
 
+  username:string = this.authenticateService.getUserName();
   ngOnInit(): void {
   }
 
