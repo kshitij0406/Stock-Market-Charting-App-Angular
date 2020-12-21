@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { LoginDetails } from '../entity/login-details';
 import { LoginResponse } from '../entity/login-response';
 import { User } from '../entity/user';
@@ -37,6 +37,20 @@ export class AuthenticateService {
 
       }));
 
+  }
+  
+  logout() {
+    this.httpClient.post(`${this.baseURL + "/logout"}`, this.refreshTokenPayload,
+      { responseType: 'text' })
+      .subscribe(data => {
+        console.log(data);
+      }, error => {
+        throwError(error);
+      })
+    this.localStorage.clear('authenticationToken');
+    this.localStorage.clear('username');
+    this.localStorage.clear('refreshToken');
+    this.localStorage.clear('expiresAt');
   }
 
   getUserName() {

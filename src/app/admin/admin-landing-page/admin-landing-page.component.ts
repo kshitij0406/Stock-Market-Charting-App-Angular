@@ -9,25 +9,30 @@ import { AuthenticateService } from 'src/app/service/authenticate.service';
 })
 export class AdminLandingPageComponent implements OnInit {
 
-  constructor(private router : Router, private authenticateService : AuthenticateService) { }
+  constructor(private router: Router, private authenticateService: AuthenticateService) { }
 
-  username:string = this.authenticateService.getUserName();
+  username: string = this.authenticateService.getUserName();
   ngOnInit(): void {
   }
 
-  importData(){
+  importData() {
 
   }
-
-  manageCompany(){
+  logout() {
+    this.authenticateService.logout();
+    this.router.navigate(['']);
+  }
+  manageCompany() {
     this.router.navigate(['company-all']);
   }
-
-  manageExchange(){
+  manageUsers() {
+    this.router.navigate(['user-all']);
+  }
+  manageExchange() {
     this.router.navigate(['stock-exchange-all']);
-  } 
+  }
 
-  manageIpo(){
+  manageIpo() {
     this.router.navigate(['ipo-all']);
   }
 

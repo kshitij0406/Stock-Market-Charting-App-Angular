@@ -11,36 +11,36 @@ import { CompanyService } from '../../service/company.service';
 })
 export class CompanyAllComponent implements OnInit {
 
-  company : Company[] = [];
-  constructor(private companyService: CompanyService  , private router:Router) { }
+  company: Company[] = [];
+  constructor(private companyService: CompanyService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAllCompany();
   }
 
-  homePage(){
+  homePage() {
     this.router.navigate(['admin-landing-page']);
   }
-  
-  public getAllCompany(){
+  addCompany() {
+    this.router.navigate(['company-add']);
+  }
+  public getAllCompany() {
     this.companyService.getCompanyList().subscribe(data => {
 
       this.company = data;
     });
   }
-  
-  addCompany(){
-    this.router.navigate(['company-add']);
-  }
 
-  updateCompany(id:number){
 
+
+  updateCompany(id: number) {
+    this.router.navigate(['company-update',id]);
   }
-  deleteCompany(id:number){
-    this.companyService.deleteCompanyById(id).subscribe(data =>{
+  deleteCompany(id: number) {
+    this.companyService.deleteCompanyById(id).subscribe(data => {
       console.log(data);
       this.getAllCompany();
-    },error=>{
+    }, error => {
       console.log(error);
     });
   }

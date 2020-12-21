@@ -17,6 +17,9 @@ export class UserAllComponent implements OnInit {
   ngOnInit(): void {
     this.getUsers();
   }
+  homePage() {
+    this.router.navigate(['admin-landing-page']);
+  }
 
   public getUsers() {
     this.userService.getUsersList().subscribe(data => {

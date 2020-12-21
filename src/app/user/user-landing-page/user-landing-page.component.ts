@@ -9,23 +9,26 @@ import { AuthenticateService } from 'src/app/service/authenticate.service';
 })
 export class UserLandingPageComponent implements OnInit {
 
-  constructor(private router: Router,private authenticateService:AuthenticateService) { }
+  constructor(private router: Router, private authenticateService: AuthenticateService) { }
 
 
-  username:string = this.authenticateService.getUserName();
+  username: string = this.authenticateService.getUserName();
 
   ngOnInit(): void {
   }
 
-  companyAll(){
+  companyAll() {
     this.router.navigate(['company-all-user']);
   }
-
-  ipoAll(){
+  logout() {
+    this.authenticateService.logout();
+    this.router.navigate(['']);
+  }
+  ipoAll() {
     this.router.navigate(['ipo-all-user']);
   }
 
-  compareCompanies(){}
+  compareCompanies() { }
 
-  compareSectors(){}
+  compareSectors() { }
 }

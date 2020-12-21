@@ -6,9 +6,13 @@
             <label>Company Name</label>
             <input type = "text" class ="form-control" id="cname" [(ngModel)] = "ipo.companyName" name = "cname">
         </div>
-        <div class ="form-group">
+        <div class="form-group">
             <label>Stock Exchange</label>
-            <input type = "text" class ="form-control" id="stockexchange" [(ngModel)] = "ipo.stockExchange" name = "stockexchange">
+            <select class="form-control" name="stockexchange" [(ngModel)]="ipo.stockExchange" id="stockexchange">
+                <option *ngFor="let exchange of stockExchangeDetails" [value]="exchange.stockExchangeName">
+                    {{exchange.stockExchangeName}}
+                </option>
+            </select>
         </div>
         <div class ="form-group">
             <label>Date</label>

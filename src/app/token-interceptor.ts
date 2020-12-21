@@ -18,7 +18,7 @@ export class TokenInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler):
         Observable<HttpEvent<any>> {
 
-        /*    if (req.url.indexOf('refresh') !== -1 || req.url.indexOf('login') !== -1) {
+           if (req.url.indexOf('refresh') !== -1 || req.url.indexOf('login') !== -1) {
                 return next.handle(req);
             }
             const jwtToken = this.authService.getJwtToken();
@@ -27,6 +27,7 @@ export class TokenInterceptor implements HttpInterceptor {
                 return next.handle(this.addToken(req, jwtToken)).pipe(catchError(error => {
                     if (error instanceof HttpErrorResponse
                         && error.status === 403) {
+                            console.log("Error Here");
                         return this.handleAuthErrors(req, next);
                     } else {
                         return throwError(error);
@@ -34,22 +35,29 @@ export class TokenInterceptor implements HttpInterceptor {
                 }));
             }
             return next.handle(req);
-        */
+        
+
+      /*  if (req.url.indexOf('refresh') !== -1 || req.url.indexOf('login') !== -1) {
+            return next.handle(req);
+        }
+        console.log('Inside Interceptor');
         const jwtToken = this.authService.getJwtToken();
         if (jwtToken) {
             this.addToken(req, jwtToken);
+            console.log("jwtToken is not null");
         }
 
         return next.handle(req).pipe(catchError(error => {
             if (error instanceof HttpErrorResponse
                 && error.status === 403) {
+                    console.log("Error Here ");
                 return this.handleAuthErrors(req, next);
             } else {
                 return throwError(error);
             }
         }));
 
-
+*/
     }
 
     private handleAuthErrors(req: HttpRequest<any>, next: HttpHandler)

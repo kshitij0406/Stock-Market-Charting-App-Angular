@@ -20,6 +20,9 @@ export class StockExchangeAllComponent implements OnInit {
   addExchange(){
     this.router.navigate(['stock-exchange-add']);
   }
+  homePage(){
+    this.router.navigate(['admin-landing-page']);
+  }
 
   getAllStockExchange(){
     this.stockExchangeService.getStockExchangeList().subscribe(data =>{

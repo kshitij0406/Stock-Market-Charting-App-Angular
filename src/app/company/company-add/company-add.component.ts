@@ -34,9 +34,6 @@ export class CompanyAddComponent implements OnInit {
     this.stockExchangeService.getStockExchangeList().subscribe(data=>{
       this.stockExchangeDetails =data;
     });
-
-
-
   }
 
   

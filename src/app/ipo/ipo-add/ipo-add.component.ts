@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { StockExchange } from 'src/app/entity/stock-exchange';
+import { StockExchangeService } from 'src/app/service/stock-exchange.service';
 import { IPODetails } from '../../entity/ipo-details';
 import { IpoDetailsService } from '../../service/ipo-details.service';
 
@@ -11,9 +13,13 @@ import { IpoDetailsService } from '../../service/ipo-details.service';
 export class IpoAddComponent implements OnInit {
 
   ipo: IPODetails = new IPODetails();
-  constructor(private ipoService: IpoDetailsService,private router:Router){} 
+  stockExchangeDetails :StockExchange[] = [];
+  constructor(private ipoService: IpoDetailsService,
+    private router:Router,
+    private stockExchangeService:StockExchangeService){} 
 
   ngOnInit(): void {
+    this.getAllExchange();
   }
   saveUser(){
     this.ipoService.addIpo(this.ipo).subscribe(data => {
@@ -23,6 +29,11 @@ export class IpoAddComponent implements OnInit {
     error => console.log(error));
   }
 
+  getAllExchange(){
+    this.stockExchangeService.getStockExchangeList().subscribe(data=>{
+      this.stockExchangeDetails =data;
+    });
+  }
   goToIpoAll(){
     this.router.navigate(['ipo-all']);
   }

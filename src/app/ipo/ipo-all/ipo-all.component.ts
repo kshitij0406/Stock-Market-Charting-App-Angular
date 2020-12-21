@@ -29,7 +29,7 @@ export class IpoAllComponent implements OnInit {
   }
 
   updateIpo(id:number){
-  
+    this.router.navigate(['ipo-update',id]);
   }
 
   homePage(){
