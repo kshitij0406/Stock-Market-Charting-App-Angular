@@ -20,6 +20,10 @@ export class UserLandingPageComponent implements OnInit {
   companyAll() {
     this.router.navigate(['company-all-user']);
   }
+  
+  homePage(){
+    this.router.navigate(['user-landing-page']);
+  }
   logout() {
     this.authenticateService.logout();
     this.router.navigate(['']);

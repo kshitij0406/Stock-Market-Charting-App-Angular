@@ -1,48 +1,51 @@
-<div class = "container">
-    <button (click) = "addExchange()" class ="btn btn-info" style="margin-left: 10px;">Add Exchange</button>
+<app-admin-landing-page></app-admin-landing-page>
+<br>
+<br>
+<div class="container">
+
+    <h2>Stock Exchange List</h2><br>
+    <div class="container">
+        <button (click)="addExchange()" class="btn btn-info" style="margin-left: 10px;">Add Exchange</button>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th> Name</th>
+                <th> Contact Address</th>
+                <th> Brief</th>
+                <th> Remarks</th>
+                <th> Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stockExchange of stockExchanges">
+                <td>
+                    {{stockExchange.id}}
+                </td>
+                <td>
+                    {{stockExchange.stockExchangeName}}
+                </td>
+                <td>
+                    {{stockExchange.contactAddress}}
+                </td>
+                <td>
+                    {{stockExchange.brief}}
+                </td>
+                <td>
+                    {{stockExchange.remarks}}
+                </td>
+
+                <td>
+                    <button (click)="updateStockExchange(stockExchange.id)" class="btn btn-info">Update</button>
+
+                    <button (click)="deleteStockExchange(stockExchange.id)" class="btn btn-info"
+                        style="margin-left: 10px;background-color: red;border-color: red;">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
 </div>
-<br>
-<div class = "container">
-    <button (click) = "homePage()" class ="btn btn-info" style="margin-left: 10px;">Home Page</button>
-</div>
-<br>
-<br>
-<h2>Stock Exchange List</h2><br><br>
-<table class="table table-striped">
-    <thead>
-        <tr><th>ID</th>
-            <th> Name</th>
-            <th> Contact Address</th>
-            <th> Brief</th>
-            <th> Remarks</th>
-            <th> Actions</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor= "let stockExchange of stockExchanges">
-            <td>
-                {{stockExchange.id}}
-            </td>
-            <td>
-                {{stockExchange.stockExchangeName}}
-            </td>
-            <td>
-                {{stockExchange.contactAddress}}
-            </td>
-            <td>
-                {{stockExchange.brief}}
-            </td>
-            <td>
-                {{stockExchange.remarks}}
-            </td>
-            
-            <td>
-                <button (click) = "updateStockExchange(stockExchange.id)" class ="btn btn-info">Update</button>            
-
-                <button (click) = "deleteStockExchange(stockExchange.id)" class ="btn btn-info" style="margin-left: 10px;">Delete</button>            
-            </td>
-        </tr>
-
-    </tbody>
-</table>

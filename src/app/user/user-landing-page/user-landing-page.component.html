@@ -1,23 +1,19 @@
-<div class="container">
-    <h2>Welcome {{username}}</h2><br>
-    <br>
-    <button (click)="logout()" class="btn btn-info" style="margin-left: 10px;">Logout</button>
-</div>
-<br>
+<div style ="background-color:black;">
+    <div class="container" >
+        <br>
+        <h2 style = "color:antiquewhite;text-align:center;">Welcome User {{username}}</h2><br>
+    <button (click)="homePage()" class="btn btn-info" style="margin-left: 10px;">Home Page</button>
 
-<div class="container">
     <button (click)="companyAll()" class="btn btn-info" style="margin-left: 10px;">All Companies</button>
-</div>
-<br>
-<div class="container">
+
     <button (click)="ipoAll()" class="btn btn-info" style="margin-left: 10px;">IPOs</button>
-</div>
-<br>
-<div class="container">
+
     <button (click)="compareCompanies()" class="btn btn-info" style="margin-left: 10px;">Compare Companies</button>
-</div>
-<br>
-<div class="container">
+
     <button (click)="compareSectors()" class="btn btn-info" style="margin-left: 10px;">Compare Sectors</button>
+    
+    <button (click)="logout()" class="btn btn-info" style="margin-left: 10px;">Logout</button>
+    <br><br><br>
+
 </div>
-<br>
+</div>

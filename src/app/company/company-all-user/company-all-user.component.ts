@@ -17,9 +17,6 @@ export class CompanyAllUserComponent implements OnInit {
     this.getAllCompany();
   }
 
-  homePage(){
-    this.router.navigate(['user-landing-page']);
-  }
   
   public getAllCompany(){
     this.companyService.getCompanyList().subscribe(data => {

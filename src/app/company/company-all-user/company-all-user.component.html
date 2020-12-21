@@ -1,41 +1,40 @@
-<div class = "container">
-    <button (click) = "homePage()" class ="btn btn-info" style="margin-left: 10px;">Home Page</button>
+<app-user-landing-page></app-user-landing-page>
+<br>
+<br>
+<div class="container">
+    <h2>Company List</h2><br><br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th> Company Name</th>
+                <th> Stock Exchange</th>
+                <th> CEO</th>
+                <th> Board Of Directors</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of company">
+                <td>
+                    {{c.id}}
+                </td>
+                <td>
+                    {{c.companyName}}
+                </td>
+                <td>
+                    {{c.stockexchange}}
+                </td>
+                <td>
+                    {{c.ceo}}
+                </td>
+                <td>
+                    {{c.boardOfDirectors}}
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
 </div>
-<br>
-
-
-<br>
-<h2>Company List</h2><br><br>
-<table class="table table-striped">
-    <thead>
-        <tr><th>ID</th>
-            <th> Company Name</th>
-            <th> Stock Exchange</th>
-            <th> CEO</th>
-            <th> Board Of Directors</th>
-            
-
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor= "let c of company">
-            <td>
-                {{c.id}}
-            </td>
-            <td>
-                {{c.companyName}}
-            </td>
-            <td>
-                {{c.stockexchange}}
-            </td>
-            <td>
-                {{c.ceo}}
-            </td>
-            <td>
-                {{c.boardOfDirectors}}
-            </td>
-            
-        </tr>
-
-    </tbody>
-</table>

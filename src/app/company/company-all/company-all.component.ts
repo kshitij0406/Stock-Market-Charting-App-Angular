@@ -18,9 +18,7 @@ export class CompanyAllComponent implements OnInit {
     this.getAllCompany();
   }
 
-  homePage() {
-    this.router.navigate(['admin-landing-page']);
-  }
+
   addCompany() {
     this.router.navigate(['company-add']);
   }

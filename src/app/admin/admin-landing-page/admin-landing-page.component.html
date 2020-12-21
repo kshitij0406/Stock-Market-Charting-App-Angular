@@ -1,26 +1,20 @@
-<div class="container">
-    <h2>Welcome {{username}}</h2><br>
+<div style ="background-color:black;">
+<div class="container" >
     <br>
-    <button (click)="logout()" class="btn btn-info" style="margin-left: 10px;">Logout</button>
-</div>
-<br>
-<div class="container">
+    <h2 style = "color:antiquewhite;text-align:center;">Welcome Admin {{username}}</h2><br>
+    <button (click)="homePage()" class="btn btn-info" style="margin-left: 10px;">Home Page</button>
+
     <button (click)="importData()" class="btn btn-info" style="margin-left: 10px;">Import Data</button>
-</div>
-<br>
-<div class="container">
+
     <button (click)="manageCompany()" class="btn btn-info" style="margin-left: 10px;">Manage Companies</button>
-</div>
-<br>
-<div class="container">
+
     <button (click)="manageExchange()" class="btn btn-info" style="margin-left: 10px;">Manage Exchanges</button>
-</div>
-<br>
-<div class="container">
+
     <button (click)="manageIpo()" class="btn btn-info" style="margin-left: 10px;">Manage IPO </button>
-</div>
-<br>
-<div class="container">
+
     <button (click)="manageUsers()" class="btn btn-info" style="margin-left: 10px;">Manage Users </button>
+
+    <button (click)="logout()" class="btn btn-info" style="margin-left: 10px;">Logout</button>
+    <br><br><br>
 </div>
-<br>
+</div>

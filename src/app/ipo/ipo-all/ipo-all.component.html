@@ -1,57 +1,57 @@
-<div class = "container">
-    <button (click) = "addIpo()" class ="btn btn-info" style="margin-left: 10px;">Add Ipo</button>
+<app-admin-landing-page></app-admin-landing-page>
+<br>
+<div class="container">
+    <button (click)="addIpo()" class="btn btn-info" style="margin-left: 10px;">Add Ipo</button>
 </div>
 <br>
-<div class = "container">
-    <button (click) = "homePage()" class ="btn btn-info" style="margin-left: 10px;">Home Page</button>
-</div>
 <br>
+<div class="container">
 
-<h2>IPO List</h2><br><br>
-<table class="table table-striped">
-    <thead>
-        <tr><th>ID</th>
-            <th> Company Name</th>
-            <th> Stock Exchange</th>
-            <th> Date</th>
-            <th> Time</th>
-            <th> Total No. Of Shares</th>
-            <th> Price Per Share</th>
-            <th> Actions</th>
+    <h2>IPO List</h2><br><br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th> Company Name</th>
+                <th> Stock Exchange</th>
+                <th> Date</th>
+                <th> Time</th>
+                <th> Total No. Of Shares</th>
+                <th> Price Per Share</th>
+                <th> Actions</th>
 
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor= "let c of ipo">
-            <td>
-                {{c.id}}
-            </td>
-            <td>
-                {{c.companyName}}
-            </td>
-            <td>
-                {{c.stockExchange}}
-            </td>
-            <td>
-                {{c.date}}
-            </td>
-            <td>
-                {{c.time}}
-            </td>
-            <td>
-                {{c.totalNumberOfShares}}
-            </td>
-            <td>
-                {{c.pricePerShare}}
-            </td>
-            <td>
-                <button (click) = "updateIpo(c.id)" class ="btn btn-info">Update</button>            
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of ipo">
+                <td>
+                    {{c.id}}
+                </td>
+                <td>
+                    {{c.companyName}}
+                </td>
+                <td>
+                    {{c.stockExchange}}
+                </td>
+                <td>
+                    {{c.date}}
+                </td>
+                <td>
+                    {{c.time}}
+                </td>
+                <td>
+                    {{c.totalNumberOfShares}}
+                </td>
+                <td>
+                    {{c.pricePerShare}}
+                </td>
+                <td>
+                    <button (click)="updateIpo(c.id)" class="btn btn-info">Update</button>
 
-                <button (click) = "deleteIpo(c.id)" class ="btn btn-info" style="margin-left: 10px;">Delete</button>            
-            </td>
-        </tr>
+                    <button (click)="deleteIpo(c.id)" class="btn btn-info" style="margin-left: 10px;background-color: red;border-color: red;">Delete</button>
+                </td>
+            </tr>
 
-    </tbody>
-</table>
-
-
+        </tbody>
+    </table>
+</div>

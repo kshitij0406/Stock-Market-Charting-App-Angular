@@ -25,6 +25,9 @@ export class AdminLandingPageComponent implements OnInit {
   manageCompany() {
     this.router.navigate(['company-all']);
   }
+  homePage(){
+    this.router.navigate(['admin-landing-page']);
+  }
   manageUsers() {
     this.router.navigate(['user-all']);
   }

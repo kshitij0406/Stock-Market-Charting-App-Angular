@@ -26,8 +26,6 @@ export class IpoAllUserComponent implements OnInit {
     });
   }
   
-  homePage(){
-    this.router.navigate(['user-landing-page']);
-  }
+
 
 }

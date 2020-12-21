@@ -1,13 +1,11 @@
+<app-admin-landing-page></app-admin-landing-page>
+<br><br>
 <div class = "container">
-    <button (click) = "homePage()" class ="btn btn-info" style="margin-left: 10px;">Home Page</button>
+<h2>Company List</h2><br>
+<div class = "container">
+    <button (click) = "addCompany()" class ="btn btn-info" style="margin-left: 10px;">Add Company</button>
 </div>
 <br>
-<div class = "container">
-    <button (click) = "addCompany()" class ="btn btn-info" style="margin-left: 10px;">Add COmpany</button>
-</div>
-<br>
-<br>
-<h2>Company List</h2><br><br>
 <table class="table table-striped">
     <thead>
         <tr><th>ID</th>
@@ -40,11 +38,11 @@
             <td>
                 <button (click) = "updateCompany(c.id)" class ="btn btn-info">Update</button>            
 
-                <button (click) = "deleteCompany(c.id)" class ="btn btn-info" style="margin-left: 10px;">Delete</button>            
+                <button (click) = "deleteCompany(c.id)" class ="btn btn-info" style="margin-left: 10px;background-color: red;border-color: red;">Delete</button>            
             </td>
         </tr>
 
     </tbody>
 </table>
 
-
+</div>
