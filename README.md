@@ -1,3 +1,7 @@
+#Important!!!
+
+run with ng serve and then uncomment the code in app/upload/export/export.component.ts
+
 # StockMarketChartingApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
