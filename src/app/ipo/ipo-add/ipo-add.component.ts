@@ -26,7 +26,10 @@ export class IpoAddComponent implements OnInit {
       console.log(data);
       this.goToIpoAll();
     },
-    error => console.log(error));
+    error => {
+      console.log(error);
+      alert("Failed to Add Ipo");
+    });
   }
 
   getAllExchange(){

@@ -26,16 +26,18 @@ export class LoginComponent implements OnInit {
 
       this.userService.getUserByUsername(this.loginDetails.username).subscribe(data =>{
         this.user = data;
+        
         if(this.user.type == 'user'){
           this.userLandingPage();
         }
         else{
           this.adminLandingPage();
-        }
-      })
+        }      })
       
     }, error => {
       console.log(error);
+      alert("Login Failed");
+
     });
 
   }

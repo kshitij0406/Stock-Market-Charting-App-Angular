@@ -16,7 +16,7 @@ export class AdminLandingPageComponent implements OnInit {
   }
 
   importData() {
-    
+    this.router.navigate(['import']);
   }
   logout() {
     this.authenticateService.logout();

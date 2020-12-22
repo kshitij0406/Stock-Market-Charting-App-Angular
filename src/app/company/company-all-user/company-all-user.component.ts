@@ -22,6 +22,9 @@ export class CompanyAllUserComponent implements OnInit {
     this.companyService.getCompanyList().subscribe(data => {
 
       this.company = data;
+    },error =>{
+      alert("Could not fetch Data. Please Login. Click on Ok to continue ");
+
     });
   }
 

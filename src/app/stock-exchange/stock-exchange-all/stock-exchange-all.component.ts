@@ -24,8 +24,10 @@ export class StockExchangeAllComponent implements OnInit {
   getAllStockExchange(){
     this.stockExchangeService.getStockExchangeList().subscribe(data =>{
       this.stockExchanges = data;
-    },error=>{
+    },error =>{
       console.log(error);
+      alert("Could not fetch data. Please Login. Click on Ok to continue ");
+
     })
   }
 
@@ -40,6 +42,8 @@ export class StockExchangeAllComponent implements OnInit {
       this.getAllStockExchange();
     },error =>{
       console.log(error);
+      alert("Delete Failed. Click on Ok to continue ");
+
     });
   }
 

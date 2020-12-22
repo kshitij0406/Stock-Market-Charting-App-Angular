@@ -23,6 +23,9 @@ export class IpoAllUserComponent implements OnInit {
     this.ipoService.getIpoList().subscribe(data => {
 
       this.ipo = data;
+    },error =>{
+      alert("Could not fetch Data. Please Login. Click on Ok to continue ");
+
     });
   }
   

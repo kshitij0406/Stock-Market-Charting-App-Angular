@@ -25,8 +25,10 @@ export class StockExchangeAddComponent implements OnInit {
     this.stockExchangeService.addStockExchange(this.stockExchange).subscribe(data=>{
       console.log(data);
       this.goToStockExchangeAll();
-    },error=>{
+    },error =>{
       console.log(error);
+      alert("Failed to Add. Click on Ok to continue ");
+
     })
   }
 

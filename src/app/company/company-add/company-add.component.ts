@@ -12,37 +12,42 @@ import { CompanyService } from '../../service/company.service';
 })
 export class CompanyAddComponent implements OnInit {
 
-  company:Company = new Company();
-  stockExchangeDetails :StockExchange[] = [];
-  
-  constructor(private companyService: CompanyService,private router:Router,private stockExchangeService:StockExchangeService){} 
+  company: Company = new Company();
+  stockExchangeDetails: StockExchange[] = [];
+
+  constructor(private companyService: CompanyService, private router: Router, private stockExchangeService: StockExchangeService) { }
 
   ngOnInit(): void {
     this.getAllExchange();
   }
-  saveUser(){
+  saveUser() {
     this.companyService.addCompany(this.company).subscribe(data => {
       console.log(data);
       this.goToCompanyAll();
+
     },
-    error => console.log(error));
+      error => {
+        console.log(error);
+        alert("Failed to Add Company");
+      });
+
   }
 
 
 
-  getAllExchange(){
-    this.stockExchangeService.getStockExchangeList().subscribe(data=>{
-      this.stockExchangeDetails =data;
+  getAllExchange() {
+    this.stockExchangeService.getStockExchangeList().subscribe(data => {
+      this.stockExchangeDetails = data;
     });
   }
 
-  
 
-  goToCompanyAll(){
+
+  goToCompanyAll() {
     this.router.navigate(['/company-all']);
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.company);
     this.saveUser();
   }

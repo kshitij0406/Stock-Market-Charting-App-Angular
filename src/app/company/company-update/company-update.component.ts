@@ -24,9 +24,10 @@ export class CompanyUpdateComponent implements OnInit {
       this.id = this.route.snapshot.params['id'];
       this.companyService.getCompanyById(this.id).subscribe(data => {
         this.company = data;
-      },error => {
-        console.log("Error Here")
+      },error =>{
         console.log(error);
+        alert("Update Failed. Click on Ok to continue ");
+
       });
     }
   
@@ -44,6 +45,9 @@ export class CompanyUpdateComponent implements OnInit {
   
       this.companyService.updateCompany(this.id, this.company).subscribe(data =>{
         this.goToCompanyAll();
+      },error =>{
+        alert("Update Failed. Click on Ok to continue ");
+
       });
   
   

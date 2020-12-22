@@ -20,9 +20,10 @@ user:User = new User();
     this.id = this.route.snapshot.params['id'];
     this.userService.getUserById(this.id).subscribe(data => {
       this.user = data;
-    },error => {
-      console.log("Error Here")
+    },error =>{
       console.log(error);
+      alert("Update Failed. Click on Ok to continue ");
+
     });
   }
 
@@ -34,6 +35,10 @@ user:User = new User();
 
     this.userService.updateUser(this.id, this.user).subscribe(data =>{
       this.goToUserAll();
+    },error =>{
+      console.log(error);
+      alert("Update Failed. Click on Ok to continue ");
+
     });
 
 

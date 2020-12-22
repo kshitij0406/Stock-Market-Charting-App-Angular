@@ -25,9 +25,10 @@ export class IpoUpdateComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.ipoService.getIpoById(this.id).subscribe(data => {
       this.ipo = data;
-    }, error => {
-      console.log("Error Here")
+    }, error =>{
       console.log(error);
+      alert("Update Failed. Click on Ok to continue ");
+
     });
   }
   getAllExchange() {
@@ -43,6 +44,10 @@ export class IpoUpdateComponent implements OnInit {
 
     this.ipoService.updateIpo(this.id, this.ipo).subscribe(data => {
       this.goToUserAll();
+    },error =>{
+      console.log(error);
+      alert("Update Failed. Click on Ok to continue ");
+
     });
 
 

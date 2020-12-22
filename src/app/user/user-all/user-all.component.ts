@@ -25,6 +25,10 @@ export class UserAllComponent implements OnInit {
     this.userService.getUsersList().subscribe(data => {
 
       this.users = data;
+    },error =>{
+      console.log(error);
+      alert("Could not fetch data. Please Login. Click on Ok to continue ");
+
     });
   }
 
@@ -38,8 +42,10 @@ export class UserAllComponent implements OnInit {
     this.userService.deleteUserById(id).subscribe(data =>{
       console.log(data);
       this.getUsers();
-    },error=>{
+    },error =>{
       console.log(error);
+      alert("Delete Failed. Click on Ok to continue ");
+
     });
   }
 

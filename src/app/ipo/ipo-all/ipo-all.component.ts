@@ -21,6 +21,9 @@ export class IpoAllComponent implements OnInit {
     this.ipoService.getIpoList().subscribe(data => {
 
       this.ipo = data;
+    },error => {
+      alert("Could not fetch data. Please Login. Click on OK to continue");
+
     });
   }
   
@@ -38,6 +41,7 @@ export class IpoAllComponent implements OnInit {
       this.getAllIpo();
     },error=>{
       console.log(error);
+      alert("Delete Failed. Click on OK to continue");
     });
   }
 

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserAllComponent } from './user/user-all/user-all.component';
 import { SignupComponent } from './authenticate/signup/signup.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { UserUpdateComponent } from './user/user-update/user-update.component';
 import { StockExchangeAllComponent } from './stock-exchange/stock-exchange-all/stock-exchange-all.component';
 import { StockExchangeAddComponent } from './stock-exchange/stock-exchange-add/stock-exchange-add.component';
@@ -23,6 +23,7 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { TokenInterceptor } from './token-interceptor';
 import { CompanyAllUserComponent } from './company/company-all-user/company-all-user.component';
 import { IpoAllUserComponent } from './ipo/ipo-all-user/ipo-all-user.component';
+import { ImportComponent } from './upload/import/import.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,11 +44,13 @@ import { IpoAllUserComponent } from './ipo/ipo-all-user/ipo-all-user.component';
     AdminLandingPageComponent,
     CompanyAllUserComponent,
     IpoAllUserComponent,
+    ImportComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     NgxWebstorageModule.forRoot()
   ],

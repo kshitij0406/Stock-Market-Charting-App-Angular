@@ -12,25 +12,29 @@ import { UserService } from '../../service/user.service';
 })
 export class SignupComponent implements OnInit {
 
-  user : User = new User();
-  constructor(private authenticateService: AuthenticateService,private router:Router){} 
+  user: User = new User();
+  constructor(private authenticateService: AuthenticateService, private router: Router) { }
 
   ngOnInit(): void {
   }
-  saveUser(){
+  saveUser() {
     this.authenticateService.signup(this.user).subscribe(data => {
       console.log(data);
       this.goToUserAll();
-      
+      alert("Signup Successful. Click on OK to continue.");
+
     },
-    error => console.log(error));
+      error => {
+        console.log(error);
+        alert("Signup Failed");
+      });
   }
 
-  goToUserAll(){
+  goToUserAll() {
     this.router.navigate(['/login']);
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.user);
     this.saveUser();
   }

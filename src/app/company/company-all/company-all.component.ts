@@ -26,6 +26,9 @@ export class CompanyAllComponent implements OnInit {
     this.companyService.getCompanyList().subscribe(data => {
 
       this.company = data;
+    },error => {
+      alert("Could not fetch data. Please Login. Click on OK to continue");
+
     });
   }
 
@@ -40,6 +43,7 @@ export class CompanyAllComponent implements OnInit {
       this.getAllCompany();
     }, error => {
       console.log(error);
+      alert("Delete Failed. Click on OK to continue");
     });
   }
 

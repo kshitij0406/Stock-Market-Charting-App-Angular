@@ -23,8 +23,10 @@ export class StockExchangeUpdateComponent implements OnInit {
     this.stockExchangeService.getStockExchangeById(this.id).subscribe(data =>{
       this.stockExchange = data;
       console.log(data);
-    },error=>{
+    },error =>{
       console.log(error);
+      alert("Update Failed. Click on Ok to continue ");
+
     });
   }
 
@@ -35,6 +37,8 @@ export class StockExchangeUpdateComponent implements OnInit {
       this.goToStockExchangeAll();
     },error =>{
       console.log(error);
+      alert("Update Failed. Click on Ok to continue ");
+
     });  
   }
 
