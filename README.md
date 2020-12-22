@@ -1,6 +1,6 @@
 # Imporatnt
 
-Run with ng serve and then uncomment the code in app/upload/export/export.component.ts and ignore the error.
+Run with ng serve and then uncomment the code in app/upload/import/import.component.ts and ignore the error.
 This will make the excel upload button work !!! 
 
 # StockMarketChartingApp
