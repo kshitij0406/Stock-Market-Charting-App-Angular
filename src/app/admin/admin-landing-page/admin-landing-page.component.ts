@@ -16,7 +16,7 @@ export class AdminLandingPageComponent implements OnInit {
   }
 
   importData() {
-
+    
   }
   logout() {
     this.authenticateService.logout();
