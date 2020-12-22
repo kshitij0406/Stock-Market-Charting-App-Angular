@@ -1,4 +1,4 @@
-#Important!!!
+# Imporatnt
 
 run with ng serve and then uncomment the code in app/upload/export/export.component.ts
 
