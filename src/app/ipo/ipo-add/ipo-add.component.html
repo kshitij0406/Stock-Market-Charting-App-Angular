@@ -5,11 +5,11 @@
     <form (ngSubmit) = "onSubmit()">
         <div class ="form-group">
             <label>Company Name</label>
-            <input type = "text" class ="form-control" id="cname" [(ngModel)] = "ipo.companyName" name = "cname">
+            <input type = "text" class ="form-control" id="cname" [(ngModel)] = "ipo.companyName" name = "cname" required>
         </div>
         <div class="form-group">
             <label>Stock Exchange</label>
-            <select class="form-control" name="stockexchange" [(ngModel)]="ipo.stockExchange" id="stockexchange">
+            <select class="form-control" name="stockexchange" [(ngModel)]="ipo.stockExchange" id="stockexchange" required>
                 <option *ngFor="let exchange of stockExchangeDetails" [value]="exchange.stockExchangeName">
                     {{exchange.stockExchangeName}}
                 </option>
@@ -17,19 +17,19 @@
         </div>
         <div class ="form-group">
             <label>Date</label>
-            <input type = "date" class ="form-control" id="date" [(ngModel)] = "ipo.date" name = "date">
+            <input type = "date" class ="form-control" id="date" [(ngModel)] = "ipo.date" name = "date" required>
         </div>
         <div class ="form-group">
             <label>Time</label>
-            <input type = "time" class ="form-control" id="time" [(ngModel)] = "ipo.time" name = "time">
+            <input type = "time" class ="form-control" id="time" [(ngModel)] = "ipo.time" name = "time" required>
         </div>
         <div class ="form-group">
             <label>Total No. Of Shares</label>
-            <input type = "number" class ="form-control" id="tns" [(ngModel)] = "ipo.totalNumberOfShares" name = "tns">
+            <input type = "number" class ="form-control" id="tns" [(ngModel)] = "ipo.totalNumberOfShares" name = "tns" required>
         </div>
         <div class ="form-group">
             <label>Price Per Share</label>
-            <input type = "float" class ="form-control" id="pps" [(ngModel)] = "ipo.pricePerShare" name = "pps">
+            <input type = "float" class ="form-control" id="pps" [(ngModel)] = "ipo.pricePerShare" name = "pps" required>
         </div>
     
     

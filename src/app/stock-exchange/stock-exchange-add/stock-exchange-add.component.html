@@ -6,7 +6,7 @@
     <form (ngSubmit) = "onSubmit()">
         <div class ="form-group">
             <label>Stock Exchange Name</label>
-            <input type = "text" class ="form-control" id="sname" [(ngModel)] = "stockExchange.stockExchangeName" name = "sname">
+            <input type = "text" class ="form-control" id="sname" [(ngModel)] = "stockExchange.stockExchangeName" name = "sname" required>
         </div>
         <div class ="form-group">
             <label>Contact Address</label>

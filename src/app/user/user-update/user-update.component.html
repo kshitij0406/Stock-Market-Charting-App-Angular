@@ -4,23 +4,23 @@
     <form (ngSubmit) = "onSubmit()">
         <div class ="form-group">
             <label>User Name</label>
-            <input type = "text" class ="form-control" id="uname" [(ngModel)] = "user.username" name = "uname">
+            <input type = "text" class ="form-control" id="uname" [(ngModel)] = "user.username" name = "uname" required>
         </div>
         <div class ="form-group">
             <label>Email Id</label>
-            <input type = "text" class ="form-control" id="emailid" [(ngModel)] = "user.email" name = "emailid">
+            <input type = "text" class ="form-control" id="emailid" [(ngModel)] = "user.email" name = "emailid" required>
         </div>
         <div class ="form-group">
             <label>Type</label>
-            <input type = "text" class ="form-control" id="type" [(ngModel)] = "user.type" name = "type">
+            <input type = "text" class ="form-control" id="type" [(ngModel)] = "user.type" name = "type" required>
         </div>
         <div class ="form-group">
             <label>Mobile Number</label>
-            <input type = "number" class ="form-control" id="mobileno" [(ngModel)] = "user.mobile" name = "mobileno">
+            <input type = "number" class ="form-control" id="mobileno" [(ngModel)] = "user.mobile" name = "mobileno" >
         </div>
         <div class ="form-group">
             <label>Password</label>
-            <input type = "text" class ="form-control" id="pass" [(ngModel)] = "user.password" name = "pass">
+            <input type = "text" class ="form-control" id="pass"  name = "pass" required>
         </div>
     
     
