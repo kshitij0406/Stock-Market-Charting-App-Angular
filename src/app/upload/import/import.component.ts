@@ -23,13 +23,19 @@ export class ImportComponent implements OnInit {
   onFileSelect(event: any) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
-     // this.uploadForm.get('profile').setValue(file);
+
+      //uncommenting this after ng serve makes upload button work !!!!
+
+      // this.uploadForm.get('profile').setValue(file);
       this.fileInputLabel = file.name;
     }
   }
 
   onSubmit() {
     const formData = new FormData();
+
+    //uncommenting this after ng serve makes upload button work !!!!
+
     //formData.append('file', this.uploadForm.get('profile').value);
 
     this.httpClient.post<any>(this.SERVER_URL, formData).subscribe(
