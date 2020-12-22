@@ -18,6 +18,7 @@ import { AdminLandingPageComponent } from './admin/admin-landing-page/admin-land
 import { IpoAllUserComponent } from './ipo/ipo-all-user/ipo-all-user.component';
 import { CompanyAllUserComponent } from './company/company-all-user/company-all-user.component';
 import { ImportComponent } from './upload/import/import.component';
+import { ExportComponent } from './upload/export/export.component';
 
 const routes: Routes = [
   {path: 'user-all', component: UserAllComponent },
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path:'admin-landing-page',component:AdminLandingPageComponent},
   {path:'ipo-all-user',component:IpoAllUserComponent},
   {path:'company-all-user',component:CompanyAllUserComponent},
-  {path:'import',component:ImportComponent}
+  {path:'import',component:ImportComponent},
+  {path:'export',component:ExportComponent}
 
 
   

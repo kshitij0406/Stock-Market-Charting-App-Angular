@@ -15,6 +15,10 @@ export class AdminLandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  exportData(){
+    this.router.navigate(['export']);
+  }
+
   importData() {
     this.router.navigate(['import']);
   }

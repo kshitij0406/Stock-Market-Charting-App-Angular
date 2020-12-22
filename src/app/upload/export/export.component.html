@@ -1,0 +1,44 @@
+
+<br>
+<br>
+<div class = "container">
+<h2>Stock Data List</h2><br><br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> ID</th>
+            <th> Company Code</th>
+            <th> Date</th>
+            <th> Price Per Share</th>
+            <th> Stock Exchange</th>
+            <th> Time</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let stock of stocks">
+            <td>
+                {{stock.id}}
+            </td>
+            <td>
+                {{stock.companyCode}}
+            </td>
+            <td>
+                {{stock.date}}
+            </td>
+            <td>
+                {{stock.pricePerShare}}
+            </td>
+            <td>
+                {{stock.stockExchange}}
+            </td>
+            <td>
+                {{stock.time}}  
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+</div>
+
+

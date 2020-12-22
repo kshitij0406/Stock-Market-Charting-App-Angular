@@ -24,6 +24,7 @@ import { TokenInterceptor } from './token-interceptor';
 import { CompanyAllUserComponent } from './company/company-all-user/company-all-user.component';
 import { IpoAllUserComponent } from './ipo/ipo-all-user/ipo-all-user.component';
 import { ImportComponent } from './upload/import/import.component';
+import { ExportComponent } from './upload/export/export.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { ImportComponent } from './upload/import/import.component';
     CompanyAllUserComponent,
     IpoAllUserComponent,
     ImportComponent,
+    ExportComponent,
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,10 @@ export class UserLandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  exportData(){
+    this.router.navigate(['export']);
+  }
+
   companyAll() {
     this.router.navigate(['company-all-user']);
   }
